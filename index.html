@@ -22,11 +22,19 @@
        </style>
       -->
    </head>
-    <body>
+    <body onload="welcomeFunction(); document.body.style.backgroundColor='pink'"
+          onresize="document.body.style.backgroundColor='lightblue'"
+          onkeydown="document.body.style.backgroundColor='white'"
+          onkeyup="document.body.style.backgroundColor='lightyellow'">
+       <script>
+          function welcomeFunction()  {
+             alert("Welcome!");
+          }
+       </script>   
       <p>
          <strong> Introduction to Information Systems </strong>
       </p>
-      <p class = "centered">
+      <p class = "centered" onmouseover="document.querySelector('.centered').style.font='bold 20pt arial,serif'">
          <em>
          Aybek Taha ATILGAN
          <br>
@@ -34,7 +42,7 @@
          </em>
       </p>
  <p> Evolution of homo species </p>
-  <ul>
+  <ul id="unorderedL"  onmouseover="document.getElementById('unorderedL').style.backgroundColor='purple'">
     <li> Homo habilis (able man) </li>
     <li> Homo erectus (upright man) </li>
     <li> Homo neanderthalensis </li>
@@ -45,7 +53,11 @@
     </ul>
   </ul>
 
- <h1> <strong> Human Evolution </strong> </h1>
+ <h1 onmouseover="style.color='orange';
+                  style.backgroundColor='lightgreen'"
+     onmouseout="style.color='red';
+                 style.backgroundColor='white'"> 
+                 <strong> Human Evolution </strong> </h1>
  <p> <img src="evolution-diagram.png"> </p>
 
  <p> You can find the link of the image below.
@@ -57,7 +69,8 @@
  <h2> <strong> The Clickable Image </strong> </h2>
  <p> This image is clickable, click on it and try.
     <a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens">
-         <img src="evolution-diagram.png">
+         <img id="myImg" alt="Evolution diagram" onclick="alert(document.getElementById('myImg').alt)" 
+              src="evolution-diagram.png"/>
     </a>
  </p> 
  
